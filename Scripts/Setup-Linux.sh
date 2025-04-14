@@ -9,3 +9,9 @@ echo "" >> ../Makefile
 echo "run: App" >> ../Makefile
 echo -e "\t@echo \"==== Running App ====\"" >> ../Makefile
 echo -e "\t@./Binaries/linux-x86_64/\$(config)/App/App" >> ../Makefile
+
+echo "" >> ../Makefile
+echo "" >> ../Makefile
+echo "test: Tests" >> ../Makefile
+echo -e "\t@echo \"==== Running Tests ====\"" >> ../Makefile
+echo -e "\t@./Binaries/linux-x86_64/\$(config)/Tests/Tests" >> ../Makefile

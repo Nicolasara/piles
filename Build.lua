@@ -1,5 +1,5 @@
 -- premake5.lua
-workspace "New Project"
+workspace "Piles"
    architecture "x64"
    configurations { "debug", "release", "dist" }
    startproject "App"
@@ -15,3 +15,4 @@ group "Core"
 group ""
 
 include "App/Build-App.lua"
+include "Tests/Build-Tests.lua"

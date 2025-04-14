@@ -1,4 +1,4 @@
-project "App"
+project "Tests"
    kind "ConsoleApp"
    language "C++"
    cppdialect "C++20"
@@ -6,26 +6,25 @@ project "App"
    staticruntime "off"
 
    files { "Source/**.h", "Source/**.cpp", "Source/**.cc" }
-
+   
    includedirs
    {
-      "Source",
-
-	  -- Include Core
-	  "../Core/Source"
+      "../Core/Source",
+      "../App/Source"
    }
-
+   
    links
    {
-      "Core"
+      "Core",
+      "gtest_main",
    }
 
    targetdir ("../Binaries/" .. OutputDir .. "/%{prj.name}")
    objdir ("../Binaries/Intermediates/" .. OutputDir .. "/%{prj.name}")
 
    filter "system:linux"
-      links { "protobuf" }
-      linkoptions { "-lprotobuf" }
+      links { "gtest", "pthread" }
+      linkoptions { "-lgtest -pthread" }
 
    filter "system:windows"
        systemversion "latest"

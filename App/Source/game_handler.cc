@@ -261,6 +261,9 @@ bool GameHandler::inCorrectOrder(Pile pile, Pile playedCards, bool increasing) {
 }
 
 Card GameHandler::getPilesTopCard(Pile pile) {
+  if (pile.cards_size() == 0) {
+    throw std::runtime_error("Cannot get the top card of an empty pile.");
+  }
   return pile.cards(pile.cards_size() - 1);
 }
 

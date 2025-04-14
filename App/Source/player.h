@@ -1,7 +1,8 @@
 #include "the_game.pb.h"
 
-class Player
-{
+#pragma once
+
+class Player {
 public:
   Piles playTurn(Piles piles, Cards cards);
 };

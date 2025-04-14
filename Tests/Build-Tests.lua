@@ -10,21 +10,25 @@ project "Tests"
    includedirs
    {
       "../Core/Source",
-      "../App/Source"
+      "../App/Source",
+      "Source"
    }
    
    links
    {
       "Core",
       "gtest_main",
+      "gtest", 
+      "pthread", 
+      "protobuf"
    }
 
    targetdir ("../Binaries/" .. OutputDir .. "/%{prj.name}")
    objdir ("../Binaries/Intermediates/" .. OutputDir .. "/%{prj.name}")
 
    filter "system:linux"
-      links { "gtest", "pthread" }
-      linkoptions { "-lgtest -pthread" }
+      links { "gtest", "pthread", "protobuf" }
+      linkoptions { "-lgtest -pthread -lprotobuf" }
 
    filter "system:windows"
        systemversion "latest"

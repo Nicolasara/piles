@@ -3,8 +3,7 @@
 
 #include "the_game.pb.h"
 
-class GameHandler
-{
+class GameHandler {
 private:
   Renderer renderer;
   Piles piles;

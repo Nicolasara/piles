@@ -1,8 +1,7 @@
-#include "the_game.pb.h"
 #include "player.h"
+#include "the_game.pb.h"
 
-Piles Player::playTurn(Piles piles, Cards cards)
-{
+Piles Player::playTurn(Piles piles, Cards cards) {
   int32_t firstCardValue = cards.cards(0).value();
   int32_t secondCardValue = cards.cards(1).value();
   Piles placedCards;

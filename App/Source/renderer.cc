@@ -1,12 +1,11 @@
 #include "renderer.h"
+#include "the_game.pb.h"
+#include <cmath>
 #include <iostream>
 #include <sstream>
 #include <string>
-#include <cmath>
-#include "the_game.pb.h"
 
-void Renderer::render(Piles piles, Cards hand)
-{
+void Renderer::render(Piles piles, Cards hand) {
   Renderer::pileToString(piles.firstone());
   Renderer::pileToString(piles.secondone());
   Renderer::pileToString(piles.firsthundred());
@@ -14,27 +13,20 @@ void Renderer::render(Piles piles, Cards hand)
   Renderer::cardsToString(hand);
 }
 
-void Renderer::pileToString(Pile pile)
-{
+void Renderer::pileToString(Pile pile) {
   std::string topRow;
-  for (int i = 0; i < pile.cards_size(); i++)
-  {
+  for (int i = 0; i < pile.cards_size(); i++) {
     topRow.append(" __");
   }
   std::cout << topRow << "__ " << std::endl;
 
-  for (int i = 0; i < 3; i++)
-  {
+  for (int i = 0; i < 3; i++) {
     std::string row;
     char cardChar;
-    for (Card card : pile.cards())
-    {
-      if (card.value() >= std::pow(10, i))
-      {
+    for (Card card : pile.cards()) {
+      if (card.value() >= std::pow(10, i)) {
         cardChar = std::to_string(card.value())[i];
-      }
-      else
-      {
+      } else {
         cardChar = ' ';
       }
       std::stringstream ss;
@@ -46,34 +38,26 @@ void Renderer::pileToString(Pile pile)
   }
 
   std::string bottomRow;
-  for (int i = 0; i < pile.cards_size(); i++)
-  {
+  for (int i = 0; i < pile.cards_size(); i++) {
     bottomRow.append("|__");
   }
   std::cout << bottomRow << "__|" << std::endl;
 }
 
-void Renderer::cardsToString(Cards cards)
-{
+void Renderer::cardsToString(Cards cards) {
   std::string topRow;
-  for (int i = 0; i < cards.cards_size(); i++)
-  {
+  for (int i = 0; i < cards.cards_size(); i++) {
     topRow.append(" __");
   }
   std::cout << topRow << "__ " << std::endl;
 
-  for (int i = 0; i < 3; i++)
-  {
+  for (int i = 0; i < 3; i++) {
     std::string row;
     char cardChar;
-    for (Card card : cards.cards())
-    {
-      if (card.value() >= std::pow(10, i))
-      {
+    for (Card card : cards.cards()) {
+      if (card.value() >= std::pow(10, i)) {
         cardChar = std::to_string(card.value())[i];
-      }
-      else
-      {
+      } else {
         cardChar = ' ';
       }
       std::stringstream ss;
@@ -85,8 +69,7 @@ void Renderer::cardsToString(Cards cards)
   }
 
   std::string bottomRow;
-  for (int i = 0; i < cards.cards_size(); i++)
-  {
+  for (int i = 0; i < cards.cards_size(); i++) {
     bottomRow.append("|__");
   }
   std::cout << bottomRow << "__|" << std::endl;

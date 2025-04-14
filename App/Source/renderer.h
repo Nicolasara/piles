@@ -1,10 +1,9 @@
-#include <string>
 #include "the_game.pb.h"
+#include <string>
 
 #pragma once
 
-class Renderer
-{
+class Renderer {
 public:
   void render(Piles piles, Cards hand);
 

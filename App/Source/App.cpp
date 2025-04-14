@@ -1,6 +1,9 @@
-#include "Core/Core.h"
+#include "game_handler.h"
 
 int main() {
-  Core::PrintHelloWorld();
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+  std::cout << "Hello, World!" << std::endl;
+  GameHandler gameHandler;
+  gameHandler.startGame();
   return 0;
 }

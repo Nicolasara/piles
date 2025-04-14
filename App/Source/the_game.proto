@@ -1,0 +1,25 @@
+syntax = "proto2";
+
+message Card {
+  optional int32 value = 1;
+}
+
+message Cards {
+  repeated Card cards = 1;
+}
+
+/*
+Currently a copy of Cards, but could be different in the future
+
+A pile is a list of cards with the last card represeting the top card
+*/
+message Pile {
+  repeated Card cards = 1;
+}
+
+message Piles {
+  optional Pile firstOne = 1;
+  optional Pile secondOne = 2;
+  optional Pile firstHundred = 3;
+  optional Pile secondHundred = 4;
+} 

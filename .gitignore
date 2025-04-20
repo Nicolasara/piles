@@ -13,3 +13,7 @@ Makefile
 
 # Exclude
 !Vendor/Binaries
+
+# Build
+*.pb.cc
+*.pb.h

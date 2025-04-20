@@ -27,22 +27,20 @@
 #include <google/protobuf/metadata_lite.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/message.h>
-#include <google/protobuf/repeated_field.h> // IWYU pragma: export
+#include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
 #include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_the_5fgame_2eproto
 PROTOBUF_NAMESPACE_OPEN
-namespace internal
-{
-  class AnyMetadata;
-} // namespace internal
+namespace internal {
+class AnyMetadata;
+}  // namespace internal
 PROTOBUF_NAMESPACE_CLOSE
 
 // Internal implementation detail -- do not use these members.
-struct TableStruct_the_5fgame_2eproto
-{
+struct TableStruct_the_5fgame_2eproto {
   static const uint32_t offsets[];
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_the_5fgame_2eproto;
@@ -59,167 +57,134 @@ class Piles;
 struct PilesDefaultTypeInternal;
 extern PilesDefaultTypeInternal _Piles_default_instance_;
 PROTOBUF_NAMESPACE_OPEN
-template <>
-::Card *Arena::CreateMaybeMessage<::Card>(Arena *);
-template <>
-::Cards *Arena::CreateMaybeMessage<::Cards>(Arena *);
-template <>
-::Pile *Arena::CreateMaybeMessage<::Pile>(Arena *);
-template <>
-::Piles *Arena::CreateMaybeMessage<::Piles>(Arena *);
+template<> ::Card* Arena::CreateMaybeMessage<::Card>(Arena*);
+template<> ::Cards* Arena::CreateMaybeMessage<::Cards>(Arena*);
+template<> ::Pile* Arena::CreateMaybeMessage<::Pile>(Arena*);
+template<> ::Piles* Arena::CreateMaybeMessage<::Piles>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 
 // ===================================================================
 
-class Card final : public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Card) */
-{
-public:
+class Card final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Card) */ {
+ public:
   inline Card() : Card(nullptr) {}
   ~Card() override;
   explicit PROTOBUF_CONSTEXPR Card(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  Card(const Card &from);
-  Card(Card &&from) noexcept
-      : Card()
-  {
+  Card(const Card& from);
+  Card(Card&& from) noexcept
+    : Card() {
     *this = ::std::move(from);
   }
 
-  inline Card &operator=(const Card &from)
-  {
+  inline Card& operator=(const Card& from) {
     CopyFrom(from);
     return *this;
   }
-  inline Card &operator=(Card &&from) noexcept
-  {
-    if (this == &from)
-      return *this;
+  inline Card& operator=(Card&& from) noexcept {
+    if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
-#ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
         && GetOwningArena() != nullptr
-#endif // !PROTOBUF_FORCE_COPY_IN_MOVE
-    )
-    {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
       InternalSwap(&from);
-    }
-    else
-    {
+    } else {
       CopyFrom(from);
     }
     return *this;
   }
 
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet &unknown_fields() const
-  {
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
     return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
   }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet *mutable_unknown_fields()
-  {
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
     return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor *descriptor()
-  {
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
     return GetDescriptor();
   }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor *GetDescriptor()
-  {
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
     return default_instance().GetMetadata().descriptor;
   }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection *GetReflection()
-  {
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const Card &default_instance()
-  {
+  static const Card& default_instance() {
     return *internal_default_instance();
   }
-  static inline const Card *internal_default_instance()
-  {
-    return reinterpret_cast<const Card *>(
-        &_Card_default_instance_);
+  static inline const Card* internal_default_instance() {
+    return reinterpret_cast<const Card*>(
+               &_Card_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-      0;
+    0;
 
-  friend void swap(Card &a, Card &b)
-  {
+  friend void swap(Card& a, Card& b) {
     a.Swap(&b);
   }
-  inline void Swap(Card *other)
-  {
-    if (other == this)
-      return;
-#ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+  inline void Swap(Card* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
-        GetOwningArena() == other->GetOwningArena())
-    {
-#else  // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() == other->GetOwningArena())
-    {
-#endif // !PROTOBUF_FORCE_COPY_IN_SWAP
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
       InternalSwap(other);
-    }
-    else
-    {
+    } else {
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(Card *other)
-  {
-    if (other == this)
-      return;
+  void UnsafeArenaSwap(Card* other) {
+    if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
   }
 
   // implements Message ----------------------------------------------
 
-  Card *New(::PROTOBUF_NAMESPACE_ID::Arena *arena = nullptr) const final
-  {
+  Card* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Card>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const Card &from);
+  void CopyFrom(const Card& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const Card &from)
-  {
+  void MergeFrom( const Card& from) {
     Card::MergeImpl(*this, from);
   }
-
-private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message &to_msg, const ::PROTOBUF_NAMESPACE_ID::Message &from_msg);
-
-public:
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
   size_t ByteSizeLong() const final;
-  const char *_InternalParse(const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final;
-  uint8_t *_InternalSerialize(
-      uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
   int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
 
-private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned);
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(Card *other);
+  void InternalSwap(Card* other);
 
-private:
+  private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName()
-  {
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
     return "Card";
   }
+  protected:
+  explicit Card(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
 
-protected:
-  explicit Card(::PROTOBUF_NAMESPACE_ID::Arena *arena,
-                bool is_message_owned = false);
-
-public:
   static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData *GetClassData() const final;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
 
   ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
@@ -227,197 +192,159 @@ public:
 
   // accessors -------------------------------------------------------
 
-  enum : int
-  {
+  enum : int {
     kValueFieldNumber = 1,
   };
   // optional int32 value = 1;
   bool has_value() const;
-
-private:
+  private:
   bool _internal_has_value() const;
-
-public:
+  public:
   void clear_value();
   int32_t value() const;
   void set_value(int32_t value);
-
-private:
+  private:
   int32_t _internal_value() const;
   void _internal_set_value(int32_t value);
+  public:
 
-public:
   // @@protoc_insertion_point(class_scope:Card)
-private:
+ private:
   class _Internal;
 
-  template <typename T>
-  friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  struct Impl_
-  {
+  struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     int32_t value_;
   };
-  union
-  {
-    Impl_ _impl_;
-  };
+  union { Impl_ _impl_; };
   friend struct ::TableStruct_the_5fgame_2eproto;
 };
 // -------------------------------------------------------------------
 
-class Cards final : public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Cards) */
-{
-public:
+class Cards final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Cards) */ {
+ public:
   inline Cards() : Cards(nullptr) {}
   ~Cards() override;
   explicit PROTOBUF_CONSTEXPR Cards(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  Cards(const Cards &from);
-  Cards(Cards &&from) noexcept
-      : Cards()
-  {
+  Cards(const Cards& from);
+  Cards(Cards&& from) noexcept
+    : Cards() {
     *this = ::std::move(from);
   }
 
-  inline Cards &operator=(const Cards &from)
-  {
+  inline Cards& operator=(const Cards& from) {
     CopyFrom(from);
     return *this;
   }
-  inline Cards &operator=(Cards &&from) noexcept
-  {
-    if (this == &from)
-      return *this;
+  inline Cards& operator=(Cards&& from) noexcept {
+    if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
-#ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
         && GetOwningArena() != nullptr
-#endif // !PROTOBUF_FORCE_COPY_IN_MOVE
-    )
-    {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
       InternalSwap(&from);
-    }
-    else
-    {
+    } else {
       CopyFrom(from);
     }
     return *this;
   }
 
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet &unknown_fields() const
-  {
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
     return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
   }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet *mutable_unknown_fields()
-  {
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
     return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor *descriptor()
-  {
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
     return GetDescriptor();
   }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor *GetDescriptor()
-  {
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
     return default_instance().GetMetadata().descriptor;
   }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection *GetReflection()
-  {
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const Cards &default_instance()
-  {
+  static const Cards& default_instance() {
     return *internal_default_instance();
   }
-  static inline const Cards *internal_default_instance()
-  {
-    return reinterpret_cast<const Cards *>(
-        &_Cards_default_instance_);
+  static inline const Cards* internal_default_instance() {
+    return reinterpret_cast<const Cards*>(
+               &_Cards_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-      1;
+    1;
 
-  friend void swap(Cards &a, Cards &b)
-  {
+  friend void swap(Cards& a, Cards& b) {
     a.Swap(&b);
   }
-  inline void Swap(Cards *other)
-  {
-    if (other == this)
-      return;
-#ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+  inline void Swap(Cards* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
-        GetOwningArena() == other->GetOwningArena())
-    {
-#else  // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() == other->GetOwningArena())
-    {
-#endif // !PROTOBUF_FORCE_COPY_IN_SWAP
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
       InternalSwap(other);
-    }
-    else
-    {
+    } else {
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(Cards *other)
-  {
-    if (other == this)
-      return;
+  void UnsafeArenaSwap(Cards* other) {
+    if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
   }
 
   // implements Message ----------------------------------------------
 
-  Cards *New(::PROTOBUF_NAMESPACE_ID::Arena *arena = nullptr) const final
-  {
+  Cards* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Cards>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const Cards &from);
+  void CopyFrom(const Cards& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const Cards &from)
-  {
+  void MergeFrom( const Cards& from) {
     Cards::MergeImpl(*this, from);
   }
-
-private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message &to_msg, const ::PROTOBUF_NAMESPACE_ID::Message &from_msg);
-
-public:
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
   size_t ByteSizeLong() const final;
-  const char *_InternalParse(const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final;
-  uint8_t *_InternalSerialize(
-      uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
   int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
 
-private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned);
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(Cards *other);
+  void InternalSwap(Cards* other);
 
-private:
+  private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName()
-  {
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
     return "Cards";
   }
+  protected:
+  explicit Cards(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
 
-protected:
-  explicit Cards(::PROTOBUF_NAMESPACE_ID::Arena *arena,
-                 bool is_message_owned = false);
-
-public:
   static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData *GetClassData() const final;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
 
   ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
@@ -425,202 +352,163 @@ public:
 
   // accessors -------------------------------------------------------
 
-  enum : int
-  {
+  enum : int {
     kCardsFieldNumber = 1,
   };
   // repeated .Card cards = 1;
   int cards_size() const;
-
-private:
+  private:
   int _internal_cards_size() const;
-
-public:
+  public:
   void clear_cards();
-  ::Card *mutable_cards(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<::Card> *
-  mutable_cards();
-
-private:
-  const ::Card &_internal_cards(int index) const;
-  ::Card *_internal_add_cards();
-
-public:
-  const ::Card &cards(int index) const;
-  ::Card *add_cards();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<::Card> &
-  cards() const;
+  ::Card* mutable_cards(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Card >*
+      mutable_cards();
+  private:
+  const ::Card& _internal_cards(int index) const;
+  ::Card* _internal_add_cards();
+  public:
+  const ::Card& cards(int index) const;
+  ::Card* add_cards();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Card >&
+      cards() const;
 
   // @@protoc_insertion_point(class_scope:Cards)
-private:
+ private:
   class _Internal;
 
-  template <typename T>
-  friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  struct Impl_
-  {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<::Card> cards_;
+  struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Card > cards_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union
-  {
-    Impl_ _impl_;
-  };
+  union { Impl_ _impl_; };
   friend struct ::TableStruct_the_5fgame_2eproto;
 };
 // -------------------------------------------------------------------
 
-class Pile final : public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Pile) */
-{
-public:
+class Pile final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Pile) */ {
+ public:
   inline Pile() : Pile(nullptr) {}
   ~Pile() override;
   explicit PROTOBUF_CONSTEXPR Pile(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  Pile(const Pile &from);
-  Pile(Pile &&from) noexcept
-      : Pile()
-  {
+  Pile(const Pile& from);
+  Pile(Pile&& from) noexcept
+    : Pile() {
     *this = ::std::move(from);
   }
 
-  inline Pile &operator=(const Pile &from)
-  {
+  inline Pile& operator=(const Pile& from) {
     CopyFrom(from);
     return *this;
   }
-  inline Pile &operator=(Pile &&from) noexcept
-  {
-    if (this == &from)
-      return *this;
+  inline Pile& operator=(Pile&& from) noexcept {
+    if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
-#ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
         && GetOwningArena() != nullptr
-#endif // !PROTOBUF_FORCE_COPY_IN_MOVE
-    )
-    {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
       InternalSwap(&from);
-    }
-    else
-    {
+    } else {
       CopyFrom(from);
     }
     return *this;
   }
 
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet &unknown_fields() const
-  {
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
     return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
   }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet *mutable_unknown_fields()
-  {
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
     return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor *descriptor()
-  {
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
     return GetDescriptor();
   }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor *GetDescriptor()
-  {
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
     return default_instance().GetMetadata().descriptor;
   }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection *GetReflection()
-  {
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const Pile &default_instance()
-  {
+  static const Pile& default_instance() {
     return *internal_default_instance();
   }
-  static inline const Pile *internal_default_instance()
-  {
-    return reinterpret_cast<const Pile *>(
-        &_Pile_default_instance_);
+  static inline const Pile* internal_default_instance() {
+    return reinterpret_cast<const Pile*>(
+               &_Pile_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-      2;
+    2;
 
-  friend void swap(Pile &a, Pile &b)
-  {
+  friend void swap(Pile& a, Pile& b) {
     a.Swap(&b);
   }
-  inline void Swap(Pile *other)
-  {
-    if (other == this)
-      return;
-#ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+  inline void Swap(Pile* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
-        GetOwningArena() == other->GetOwningArena())
-    {
-#else  // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() == other->GetOwningArena())
-    {
-#endif // !PROTOBUF_FORCE_COPY_IN_SWAP
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
       InternalSwap(other);
-    }
-    else
-    {
+    } else {
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(Pile *other)
-  {
-    if (other == this)
-      return;
+  void UnsafeArenaSwap(Pile* other) {
+    if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
   }
 
   // implements Message ----------------------------------------------
 
-  Pile *New(::PROTOBUF_NAMESPACE_ID::Arena *arena = nullptr) const final
-  {
+  Pile* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Pile>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const Pile &from);
+  void CopyFrom(const Pile& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const Pile &from)
-  {
+  void MergeFrom( const Pile& from) {
     Pile::MergeImpl(*this, from);
   }
-
-private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message &to_msg, const ::PROTOBUF_NAMESPACE_ID::Message &from_msg);
-
-public:
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
   size_t ByteSizeLong() const final;
-  const char *_InternalParse(const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final;
-  uint8_t *_InternalSerialize(
-      uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
   int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
 
-private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned);
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(Pile *other);
+  void InternalSwap(Pile* other);
 
-private:
+  private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName()
-  {
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
     return "Pile";
   }
+  protected:
+  explicit Pile(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
 
-protected:
-  explicit Pile(::PROTOBUF_NAMESPACE_ID::Arena *arena,
-                bool is_message_owned = false);
-
-public:
   static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData *GetClassData() const final;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
 
   ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
@@ -628,202 +516,163 @@ public:
 
   // accessors -------------------------------------------------------
 
-  enum : int
-  {
+  enum : int {
     kCardsFieldNumber = 1,
   };
   // repeated .Card cards = 1;
   int cards_size() const;
-
-private:
+  private:
   int _internal_cards_size() const;
-
-public:
+  public:
   void clear_cards();
-  ::Card *mutable_cards(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<::Card> *
-  mutable_cards();
-
-private:
-  const ::Card &_internal_cards(int index) const;
-  ::Card *_internal_add_cards();
-
-public:
-  const ::Card &cards(int index) const;
-  ::Card *add_cards();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<::Card> &
-  cards() const;
+  ::Card* mutable_cards(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Card >*
+      mutable_cards();
+  private:
+  const ::Card& _internal_cards(int index) const;
+  ::Card* _internal_add_cards();
+  public:
+  const ::Card& cards(int index) const;
+  ::Card* add_cards();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Card >&
+      cards() const;
 
   // @@protoc_insertion_point(class_scope:Pile)
-private:
+ private:
   class _Internal;
 
-  template <typename T>
-  friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  struct Impl_
-  {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<::Card> cards_;
+  struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Card > cards_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
-  union
-  {
-    Impl_ _impl_;
-  };
+  union { Impl_ _impl_; };
   friend struct ::TableStruct_the_5fgame_2eproto;
 };
 // -------------------------------------------------------------------
 
-class Piles final : public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Piles) */
-{
-public:
+class Piles final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Piles) */ {
+ public:
   inline Piles() : Piles(nullptr) {}
   ~Piles() override;
   explicit PROTOBUF_CONSTEXPR Piles(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  Piles(const Piles &from);
-  Piles(Piles &&from) noexcept
-      : Piles()
-  {
+  Piles(const Piles& from);
+  Piles(Piles&& from) noexcept
+    : Piles() {
     *this = ::std::move(from);
   }
 
-  inline Piles &operator=(const Piles &from)
-  {
+  inline Piles& operator=(const Piles& from) {
     CopyFrom(from);
     return *this;
   }
-  inline Piles &operator=(Piles &&from) noexcept
-  {
-    if (this == &from)
-      return *this;
+  inline Piles& operator=(Piles&& from) noexcept {
+    if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
-#ifdef PROTOBUF_FORCE_COPY_IN_MOVE
+  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
         && GetOwningArena() != nullptr
-#endif // !PROTOBUF_FORCE_COPY_IN_MOVE
-    )
-    {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
+    ) {
       InternalSwap(&from);
-    }
-    else
-    {
+    } else {
       CopyFrom(from);
     }
     return *this;
   }
 
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet &unknown_fields() const
-  {
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
     return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
   }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet *mutable_unknown_fields()
-  {
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
     return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
   }
 
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor *descriptor()
-  {
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
     return GetDescriptor();
   }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor *GetDescriptor()
-  {
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
     return default_instance().GetMetadata().descriptor;
   }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection *GetReflection()
-  {
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const Piles &default_instance()
-  {
+  static const Piles& default_instance() {
     return *internal_default_instance();
   }
-  static inline const Piles *internal_default_instance()
-  {
-    return reinterpret_cast<const Piles *>(
-        &_Piles_default_instance_);
+  static inline const Piles* internal_default_instance() {
+    return reinterpret_cast<const Piles*>(
+               &_Piles_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-      3;
+    3;
 
-  friend void swap(Piles &a, Piles &b)
-  {
+  friend void swap(Piles& a, Piles& b) {
     a.Swap(&b);
   }
-  inline void Swap(Piles *other)
-  {
-    if (other == this)
-      return;
-#ifdef PROTOBUF_FORCE_COPY_IN_SWAP
+  inline void Swap(Piles* other) {
+    if (other == this) return;
+  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
-        GetOwningArena() == other->GetOwningArena())
-    {
-#else  // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() == other->GetOwningArena())
-    {
-#endif // !PROTOBUF_FORCE_COPY_IN_SWAP
+        GetOwningArena() == other->GetOwningArena()) {
+   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
+    if (GetOwningArena() == other->GetOwningArena()) {
+  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
       InternalSwap(other);
-    }
-    else
-    {
+    } else {
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(Piles *other)
-  {
-    if (other == this)
-      return;
+  void UnsafeArenaSwap(Piles* other) {
+    if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
   }
 
   // implements Message ----------------------------------------------
 
-  Piles *New(::PROTOBUF_NAMESPACE_ID::Arena *arena = nullptr) const final
-  {
+  Piles* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
     return CreateMaybeMessage<Piles>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const Piles &from);
+  void CopyFrom(const Piles& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom(const Piles &from)
-  {
+  void MergeFrom( const Piles& from) {
     Piles::MergeImpl(*this, from);
   }
-
-private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message &to_msg, const ::PROTOBUF_NAMESPACE_ID::Message &from_msg);
-
-public:
+  private:
+  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
+  public:
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
   size_t ByteSizeLong() const final;
-  const char *_InternalParse(const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final;
-  uint8_t *_InternalSerialize(
-      uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  uint8_t* _InternalSerialize(
+      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
   int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
 
-private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned);
+  private:
+  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(Piles *other);
+  void InternalSwap(Piles* other);
 
-private:
+  private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName()
-  {
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
     return "Piles";
   }
+  protected:
+  explicit Piles(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                       bool is_message_owned = false);
+  public:
 
-protected:
-  explicit Piles(::PROTOBUF_NAMESPACE_ID::Arena *arena,
-                 bool is_message_owned = false);
-
-public:
   static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData *GetClassData() const final;
+  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
 
   ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
 
@@ -831,8 +680,7 @@ public:
 
   // accessors -------------------------------------------------------
 
-  enum : int
-  {
+  enum : int {
     kFirstOneFieldNumber = 1,
     kSecondOneFieldNumber = 2,
     kFirstHundredFieldNumber = 3,
@@ -840,156 +688,129 @@ public:
   };
   // optional .Pile firstOne = 1;
   bool has_firstone() const;
-
-private:
+  private:
   bool _internal_has_firstone() const;
-
-public:
+  public:
   void clear_firstone();
-  const ::Pile &firstone() const;
-  PROTOBUF_NODISCARD ::Pile *release_firstone();
-  ::Pile *mutable_firstone();
-  void set_allocated_firstone(::Pile *firstone);
-
-private:
-  const ::Pile &_internal_firstone() const;
-  ::Pile *_internal_mutable_firstone();
-
-public:
+  const ::Pile& firstone() const;
+  PROTOBUF_NODISCARD ::Pile* release_firstone();
+  ::Pile* mutable_firstone();
+  void set_allocated_firstone(::Pile* firstone);
+  private:
+  const ::Pile& _internal_firstone() const;
+  ::Pile* _internal_mutable_firstone();
+  public:
   void unsafe_arena_set_allocated_firstone(
-      ::Pile *firstone);
-  ::Pile *unsafe_arena_release_firstone();
+      ::Pile* firstone);
+  ::Pile* unsafe_arena_release_firstone();
 
   // optional .Pile secondOne = 2;
   bool has_secondone() const;
-
-private:
+  private:
   bool _internal_has_secondone() const;
-
-public:
+  public:
   void clear_secondone();
-  const ::Pile &secondone() const;
-  PROTOBUF_NODISCARD ::Pile *release_secondone();
-  ::Pile *mutable_secondone();
-  void set_allocated_secondone(::Pile *secondone);
-
-private:
-  const ::Pile &_internal_secondone() const;
-  ::Pile *_internal_mutable_secondone();
-
-public:
+  const ::Pile& secondone() const;
+  PROTOBUF_NODISCARD ::Pile* release_secondone();
+  ::Pile* mutable_secondone();
+  void set_allocated_secondone(::Pile* secondone);
+  private:
+  const ::Pile& _internal_secondone() const;
+  ::Pile* _internal_mutable_secondone();
+  public:
   void unsafe_arena_set_allocated_secondone(
-      ::Pile *secondone);
-  ::Pile *unsafe_arena_release_secondone();
+      ::Pile* secondone);
+  ::Pile* unsafe_arena_release_secondone();
 
   // optional .Pile firstHundred = 3;
   bool has_firsthundred() const;
-
-private:
+  private:
   bool _internal_has_firsthundred() const;
-
-public:
+  public:
   void clear_firsthundred();
-  const ::Pile &firsthundred() const;
-  PROTOBUF_NODISCARD ::Pile *release_firsthundred();
-  ::Pile *mutable_firsthundred();
-  void set_allocated_firsthundred(::Pile *firsthundred);
-
-private:
-  const ::Pile &_internal_firsthundred() const;
-  ::Pile *_internal_mutable_firsthundred();
-
-public:
+  const ::Pile& firsthundred() const;
+  PROTOBUF_NODISCARD ::Pile* release_firsthundred();
+  ::Pile* mutable_firsthundred();
+  void set_allocated_firsthundred(::Pile* firsthundred);
+  private:
+  const ::Pile& _internal_firsthundred() const;
+  ::Pile* _internal_mutable_firsthundred();
+  public:
   void unsafe_arena_set_allocated_firsthundred(
-      ::Pile *firsthundred);
-  ::Pile *unsafe_arena_release_firsthundred();
+      ::Pile* firsthundred);
+  ::Pile* unsafe_arena_release_firsthundred();
 
   // optional .Pile secondHundred = 4;
   bool has_secondhundred() const;
-
-private:
+  private:
   bool _internal_has_secondhundred() const;
-
-public:
+  public:
   void clear_secondhundred();
-  const ::Pile &secondhundred() const;
-  PROTOBUF_NODISCARD ::Pile *release_secondhundred();
-  ::Pile *mutable_secondhundred();
-  void set_allocated_secondhundred(::Pile *secondhundred);
-
-private:
-  const ::Pile &_internal_secondhundred() const;
-  ::Pile *_internal_mutable_secondhundred();
-
-public:
+  const ::Pile& secondhundred() const;
+  PROTOBUF_NODISCARD ::Pile* release_secondhundred();
+  ::Pile* mutable_secondhundred();
+  void set_allocated_secondhundred(::Pile* secondhundred);
+  private:
+  const ::Pile& _internal_secondhundred() const;
+  ::Pile* _internal_mutable_secondhundred();
+  public:
   void unsafe_arena_set_allocated_secondhundred(
-      ::Pile *secondhundred);
-  ::Pile *unsafe_arena_release_secondhundred();
+      ::Pile* secondhundred);
+  ::Pile* unsafe_arena_release_secondhundred();
 
   // @@protoc_insertion_point(class_scope:Piles)
-private:
+ private:
   class _Internal;
 
-  template <typename T>
-  friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  struct Impl_
-  {
+  struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::Pile *firstone_;
-    ::Pile *secondone_;
-    ::Pile *firsthundred_;
-    ::Pile *secondhundred_;
+    ::Pile* firstone_;
+    ::Pile* secondone_;
+    ::Pile* firsthundred_;
+    ::Pile* secondhundred_;
   };
-  union
-  {
-    Impl_ _impl_;
-  };
+  union { Impl_ _impl_; };
   friend struct ::TableStruct_the_5fgame_2eproto;
 };
 // ===================================================================
 
+
 // ===================================================================
 
 #ifdef __GNUC__
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wstrict-aliasing"
-#endif // __GNUC__
+  #pragma GCC diagnostic push
+  #pragma GCC diagnostic ignored "-Wstrict-aliasing"
+#endif  // __GNUC__
 // Card
 
 // optional int32 value = 1;
-inline bool Card::_internal_has_value() const
-{
+inline bool Card::_internal_has_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool Card::has_value() const
-{
+inline bool Card::has_value() const {
   return _internal_has_value();
 }
-inline void Card::clear_value()
-{
+inline void Card::clear_value() {
   _impl_.value_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int32_t Card::_internal_value() const
-{
+inline int32_t Card::_internal_value() const {
   return _impl_.value_;
 }
-inline int32_t Card::value() const
-{
+inline int32_t Card::value() const {
   // @@protoc_insertion_point(field_get:Card.value)
   return _internal_value();
 }
-inline void Card::_internal_set_value(int32_t value)
-{
+inline void Card::_internal_set_value(int32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.value_ = value;
 }
-inline void Card::set_value(int32_t value)
-{
+inline void Card::set_value(int32_t value) {
   _internal_set_value(value);
   // @@protoc_insertion_point(field_set:Card.value)
 }
@@ -999,51 +820,41 @@ inline void Card::set_value(int32_t value)
 // Cards
 
 // repeated .Card cards = 1;
-inline int Cards::_internal_cards_size() const
-{
+inline int Cards::_internal_cards_size() const {
   return _impl_.cards_.size();
 }
-inline int Cards::cards_size() const
-{
+inline int Cards::cards_size() const {
   return _internal_cards_size();
 }
-inline void Cards::clear_cards()
-{
+inline void Cards::clear_cards() {
   _impl_.cards_.Clear();
 }
-inline ::Card *Cards::mutable_cards(int index)
-{
+inline ::Card* Cards::mutable_cards(int index) {
   // @@protoc_insertion_point(field_mutable:Cards.cards)
   return _impl_.cards_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<::Card> *
-Cards::mutable_cards()
-{
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Card >*
+Cards::mutable_cards() {
   // @@protoc_insertion_point(field_mutable_list:Cards.cards)
   return &_impl_.cards_;
 }
-inline const ::Card &Cards::_internal_cards(int index) const
-{
+inline const ::Card& Cards::_internal_cards(int index) const {
   return _impl_.cards_.Get(index);
 }
-inline const ::Card &Cards::cards(int index) const
-{
+inline const ::Card& Cards::cards(int index) const {
   // @@protoc_insertion_point(field_get:Cards.cards)
   return _internal_cards(index);
 }
-inline ::Card *Cards::_internal_add_cards()
-{
+inline ::Card* Cards::_internal_add_cards() {
   return _impl_.cards_.Add();
 }
-inline ::Card *Cards::add_cards()
-{
-  ::Card *_add = _internal_add_cards();
+inline ::Card* Cards::add_cards() {
+  ::Card* _add = _internal_add_cards();
   // @@protoc_insertion_point(field_add:Cards.cards)
   return _add;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<::Card> &
-Cards::cards() const
-{
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Card >&
+Cards::cards() const {
   // @@protoc_insertion_point(field_list:Cards.cards)
   return _impl_.cards_;
 }
@@ -1053,51 +864,41 @@ Cards::cards() const
 // Pile
 
 // repeated .Card cards = 1;
-inline int Pile::_internal_cards_size() const
-{
+inline int Pile::_internal_cards_size() const {
   return _impl_.cards_.size();
 }
-inline int Pile::cards_size() const
-{
+inline int Pile::cards_size() const {
   return _internal_cards_size();
 }
-inline void Pile::clear_cards()
-{
+inline void Pile::clear_cards() {
   _impl_.cards_.Clear();
 }
-inline ::Card *Pile::mutable_cards(int index)
-{
+inline ::Card* Pile::mutable_cards(int index) {
   // @@protoc_insertion_point(field_mutable:Pile.cards)
   return _impl_.cards_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<::Card> *
-Pile::mutable_cards()
-{
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Card >*
+Pile::mutable_cards() {
   // @@protoc_insertion_point(field_mutable_list:Pile.cards)
   return &_impl_.cards_;
 }
-inline const ::Card &Pile::_internal_cards(int index) const
-{
+inline const ::Card& Pile::_internal_cards(int index) const {
   return _impl_.cards_.Get(index);
 }
-inline const ::Card &Pile::cards(int index) const
-{
+inline const ::Card& Pile::cards(int index) const {
   // @@protoc_insertion_point(field_get:Pile.cards)
   return _internal_cards(index);
 }
-inline ::Card *Pile::_internal_add_cards()
-{
+inline ::Card* Pile::_internal_add_cards() {
   return _impl_.cards_.Add();
 }
-inline ::Card *Pile::add_cards()
-{
-  ::Card *_add = _internal_add_cards();
+inline ::Card* Pile::add_cards() {
+  ::Card* _add = _internal_add_cards();
   // @@protoc_insertion_point(field_add:Pile.cards)
   return _add;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<::Card> &
-Pile::cards() const
-{
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::Card >&
+Pile::cards() const {
   // @@protoc_insertion_point(field_list:Pile.cards)
   return _impl_.cards_;
 }
@@ -1107,114 +908,89 @@ Pile::cards() const
 // Piles
 
 // optional .Pile firstOne = 1;
-inline bool Piles::_internal_has_firstone() const
-{
+inline bool Piles::_internal_has_firstone() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.firstone_ != nullptr);
   return value;
 }
-inline bool Piles::has_firstone() const
-{
+inline bool Piles::has_firstone() const {
   return _internal_has_firstone();
 }
-inline void Piles::clear_firstone()
-{
-  if (_impl_.firstone_ != nullptr)
-    _impl_.firstone_->Clear();
+inline void Piles::clear_firstone() {
+  if (_impl_.firstone_ != nullptr) _impl_.firstone_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const ::Pile &Piles::_internal_firstone() const
-{
-  const ::Pile *p = _impl_.firstone_;
-  return p != nullptr ? *p : reinterpret_cast<const ::Pile &>(::_Pile_default_instance_);
+inline const ::Pile& Piles::_internal_firstone() const {
+  const ::Pile* p = _impl_.firstone_;
+  return p != nullptr ? *p : reinterpret_cast<const ::Pile&>(
+      ::_Pile_default_instance_);
 }
-inline const ::Pile &Piles::firstone() const
-{
+inline const ::Pile& Piles::firstone() const {
   // @@protoc_insertion_point(field_get:Piles.firstOne)
   return _internal_firstone();
 }
 inline void Piles::unsafe_arena_set_allocated_firstone(
-    ::Pile *firstone)
-{
-  if (GetArenaForAllocation() == nullptr)
-  {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite *>(_impl_.firstone_);
+    ::Pile* firstone) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.firstone_);
   }
   _impl_.firstone_ = firstone;
-  if (firstone)
-  {
+  if (firstone) {
     _impl_._has_bits_[0] |= 0x00000001u;
-  }
-  else
-  {
+  } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Piles.firstOne)
 }
-inline ::Pile *Piles::release_firstone()
-{
+inline ::Pile* Piles::release_firstone() {
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::Pile *temp = _impl_.firstone_;
+  ::Pile* temp = _impl_.firstone_;
   _impl_.firstone_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
-  auto *old = reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite *>(temp);
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  if (GetArenaForAllocation() == nullptr)
-  {
-    delete old;
-  }
+  if (GetArenaForAllocation() == nullptr) { delete old; }
 #else  // PROTOBUF_FORCE_COPY_IN_RELEASE
-  if (GetArenaForAllocation() != nullptr)
-  {
+  if (GetArenaForAllocation() != nullptr) {
     temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // !PROTOBUF_FORCE_COPY_IN_RELEASE
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::Pile *Piles::unsafe_arena_release_firstone()
-{
+inline ::Pile* Piles::unsafe_arena_release_firstone() {
   // @@protoc_insertion_point(field_release:Piles.firstOne)
   _impl_._has_bits_[0] &= ~0x00000001u;
-  ::Pile *temp = _impl_.firstone_;
+  ::Pile* temp = _impl_.firstone_;
   _impl_.firstone_ = nullptr;
   return temp;
 }
-inline ::Pile *Piles::_internal_mutable_firstone()
-{
+inline ::Pile* Piles::_internal_mutable_firstone() {
   _impl_._has_bits_[0] |= 0x00000001u;
-  if (_impl_.firstone_ == nullptr)
-  {
-    auto *p = CreateMaybeMessage<::Pile>(GetArenaForAllocation());
+  if (_impl_.firstone_ == nullptr) {
+    auto* p = CreateMaybeMessage<::Pile>(GetArenaForAllocation());
     _impl_.firstone_ = p;
   }
   return _impl_.firstone_;
 }
-inline ::Pile *Piles::mutable_firstone()
-{
-  ::Pile *_msg = _internal_mutable_firstone();
+inline ::Pile* Piles::mutable_firstone() {
+  ::Pile* _msg = _internal_mutable_firstone();
   // @@protoc_insertion_point(field_mutable:Piles.firstOne)
   return _msg;
 }
-inline void Piles::set_allocated_firstone(::Pile *firstone)
-{
-  ::PROTOBUF_NAMESPACE_ID::Arena *message_arena = GetArenaForAllocation();
-  if (message_arena == nullptr)
-  {
+inline void Piles::set_allocated_firstone(::Pile* firstone) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
     delete _impl_.firstone_;
   }
-  if (firstone)
-  {
-    ::PROTOBUF_NAMESPACE_ID::Arena *submessage_arena =
+  if (firstone) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(firstone);
-    if (message_arena != submessage_arena)
-    {
+    if (message_arena != submessage_arena) {
       firstone = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, firstone, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000001u;
-  }
-  else
-  {
+  } else {
     _impl_._has_bits_[0] &= ~0x00000001u;
   }
   _impl_.firstone_ = firstone;
@@ -1222,114 +998,89 @@ inline void Piles::set_allocated_firstone(::Pile *firstone)
 }
 
 // optional .Pile secondOne = 2;
-inline bool Piles::_internal_has_secondone() const
-{
+inline bool Piles::_internal_has_secondone() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.secondone_ != nullptr);
   return value;
 }
-inline bool Piles::has_secondone() const
-{
+inline bool Piles::has_secondone() const {
   return _internal_has_secondone();
 }
-inline void Piles::clear_secondone()
-{
-  if (_impl_.secondone_ != nullptr)
-    _impl_.secondone_->Clear();
+inline void Piles::clear_secondone() {
+  if (_impl_.secondone_ != nullptr) _impl_.secondone_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const ::Pile &Piles::_internal_secondone() const
-{
-  const ::Pile *p = _impl_.secondone_;
-  return p != nullptr ? *p : reinterpret_cast<const ::Pile &>(::_Pile_default_instance_);
+inline const ::Pile& Piles::_internal_secondone() const {
+  const ::Pile* p = _impl_.secondone_;
+  return p != nullptr ? *p : reinterpret_cast<const ::Pile&>(
+      ::_Pile_default_instance_);
 }
-inline const ::Pile &Piles::secondone() const
-{
+inline const ::Pile& Piles::secondone() const {
   // @@protoc_insertion_point(field_get:Piles.secondOne)
   return _internal_secondone();
 }
 inline void Piles::unsafe_arena_set_allocated_secondone(
-    ::Pile *secondone)
-{
-  if (GetArenaForAllocation() == nullptr)
-  {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite *>(_impl_.secondone_);
+    ::Pile* secondone) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.secondone_);
   }
   _impl_.secondone_ = secondone;
-  if (secondone)
-  {
+  if (secondone) {
     _impl_._has_bits_[0] |= 0x00000002u;
-  }
-  else
-  {
+  } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Piles.secondOne)
 }
-inline ::Pile *Piles::release_secondone()
-{
+inline ::Pile* Piles::release_secondone() {
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::Pile *temp = _impl_.secondone_;
+  ::Pile* temp = _impl_.secondone_;
   _impl_.secondone_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
-  auto *old = reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite *>(temp);
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  if (GetArenaForAllocation() == nullptr)
-  {
-    delete old;
-  }
+  if (GetArenaForAllocation() == nullptr) { delete old; }
 #else  // PROTOBUF_FORCE_COPY_IN_RELEASE
-  if (GetArenaForAllocation() != nullptr)
-  {
+  if (GetArenaForAllocation() != nullptr) {
     temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // !PROTOBUF_FORCE_COPY_IN_RELEASE
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::Pile *Piles::unsafe_arena_release_secondone()
-{
+inline ::Pile* Piles::unsafe_arena_release_secondone() {
   // @@protoc_insertion_point(field_release:Piles.secondOne)
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::Pile *temp = _impl_.secondone_;
+  ::Pile* temp = _impl_.secondone_;
   _impl_.secondone_ = nullptr;
   return temp;
 }
-inline ::Pile *Piles::_internal_mutable_secondone()
-{
+inline ::Pile* Piles::_internal_mutable_secondone() {
   _impl_._has_bits_[0] |= 0x00000002u;
-  if (_impl_.secondone_ == nullptr)
-  {
-    auto *p = CreateMaybeMessage<::Pile>(GetArenaForAllocation());
+  if (_impl_.secondone_ == nullptr) {
+    auto* p = CreateMaybeMessage<::Pile>(GetArenaForAllocation());
     _impl_.secondone_ = p;
   }
   return _impl_.secondone_;
 }
-inline ::Pile *Piles::mutable_secondone()
-{
-  ::Pile *_msg = _internal_mutable_secondone();
+inline ::Pile* Piles::mutable_secondone() {
+  ::Pile* _msg = _internal_mutable_secondone();
   // @@protoc_insertion_point(field_mutable:Piles.secondOne)
   return _msg;
 }
-inline void Piles::set_allocated_secondone(::Pile *secondone)
-{
-  ::PROTOBUF_NAMESPACE_ID::Arena *message_arena = GetArenaForAllocation();
-  if (message_arena == nullptr)
-  {
+inline void Piles::set_allocated_secondone(::Pile* secondone) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
     delete _impl_.secondone_;
   }
-  if (secondone)
-  {
-    ::PROTOBUF_NAMESPACE_ID::Arena *submessage_arena =
+  if (secondone) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(secondone);
-    if (message_arena != submessage_arena)
-    {
+    if (message_arena != submessage_arena) {
       secondone = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, secondone, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000002u;
-  }
-  else
-  {
+  } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.secondone_ = secondone;
@@ -1337,114 +1088,89 @@ inline void Piles::set_allocated_secondone(::Pile *secondone)
 }
 
 // optional .Pile firstHundred = 3;
-inline bool Piles::_internal_has_firsthundred() const
-{
+inline bool Piles::_internal_has_firsthundred() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.firsthundred_ != nullptr);
   return value;
 }
-inline bool Piles::has_firsthundred() const
-{
+inline bool Piles::has_firsthundred() const {
   return _internal_has_firsthundred();
 }
-inline void Piles::clear_firsthundred()
-{
-  if (_impl_.firsthundred_ != nullptr)
-    _impl_.firsthundred_->Clear();
+inline void Piles::clear_firsthundred() {
+  if (_impl_.firsthundred_ != nullptr) _impl_.firsthundred_->Clear();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const ::Pile &Piles::_internal_firsthundred() const
-{
-  const ::Pile *p = _impl_.firsthundred_;
-  return p != nullptr ? *p : reinterpret_cast<const ::Pile &>(::_Pile_default_instance_);
+inline const ::Pile& Piles::_internal_firsthundred() const {
+  const ::Pile* p = _impl_.firsthundred_;
+  return p != nullptr ? *p : reinterpret_cast<const ::Pile&>(
+      ::_Pile_default_instance_);
 }
-inline const ::Pile &Piles::firsthundred() const
-{
+inline const ::Pile& Piles::firsthundred() const {
   // @@protoc_insertion_point(field_get:Piles.firstHundred)
   return _internal_firsthundred();
 }
 inline void Piles::unsafe_arena_set_allocated_firsthundred(
-    ::Pile *firsthundred)
-{
-  if (GetArenaForAllocation() == nullptr)
-  {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite *>(_impl_.firsthundred_);
+    ::Pile* firsthundred) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.firsthundred_);
   }
   _impl_.firsthundred_ = firsthundred;
-  if (firsthundred)
-  {
+  if (firsthundred) {
     _impl_._has_bits_[0] |= 0x00000004u;
-  }
-  else
-  {
+  } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Piles.firstHundred)
 }
-inline ::Pile *Piles::release_firsthundred()
-{
+inline ::Pile* Piles::release_firsthundred() {
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::Pile *temp = _impl_.firsthundred_;
+  ::Pile* temp = _impl_.firsthundred_;
   _impl_.firsthundred_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
-  auto *old = reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite *>(temp);
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  if (GetArenaForAllocation() == nullptr)
-  {
-    delete old;
-  }
+  if (GetArenaForAllocation() == nullptr) { delete old; }
 #else  // PROTOBUF_FORCE_COPY_IN_RELEASE
-  if (GetArenaForAllocation() != nullptr)
-  {
+  if (GetArenaForAllocation() != nullptr) {
     temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // !PROTOBUF_FORCE_COPY_IN_RELEASE
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::Pile *Piles::unsafe_arena_release_firsthundred()
-{
+inline ::Pile* Piles::unsafe_arena_release_firsthundred() {
   // @@protoc_insertion_point(field_release:Piles.firstHundred)
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::Pile *temp = _impl_.firsthundred_;
+  ::Pile* temp = _impl_.firsthundred_;
   _impl_.firsthundred_ = nullptr;
   return temp;
 }
-inline ::Pile *Piles::_internal_mutable_firsthundred()
-{
+inline ::Pile* Piles::_internal_mutable_firsthundred() {
   _impl_._has_bits_[0] |= 0x00000004u;
-  if (_impl_.firsthundred_ == nullptr)
-  {
-    auto *p = CreateMaybeMessage<::Pile>(GetArenaForAllocation());
+  if (_impl_.firsthundred_ == nullptr) {
+    auto* p = CreateMaybeMessage<::Pile>(GetArenaForAllocation());
     _impl_.firsthundred_ = p;
   }
   return _impl_.firsthundred_;
 }
-inline ::Pile *Piles::mutable_firsthundred()
-{
-  ::Pile *_msg = _internal_mutable_firsthundred();
+inline ::Pile* Piles::mutable_firsthundred() {
+  ::Pile* _msg = _internal_mutable_firsthundred();
   // @@protoc_insertion_point(field_mutable:Piles.firstHundred)
   return _msg;
 }
-inline void Piles::set_allocated_firsthundred(::Pile *firsthundred)
-{
-  ::PROTOBUF_NAMESPACE_ID::Arena *message_arena = GetArenaForAllocation();
-  if (message_arena == nullptr)
-  {
+inline void Piles::set_allocated_firsthundred(::Pile* firsthundred) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
     delete _impl_.firsthundred_;
   }
-  if (firsthundred)
-  {
-    ::PROTOBUF_NAMESPACE_ID::Arena *submessage_arena =
+  if (firsthundred) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(firsthundred);
-    if (message_arena != submessage_arena)
-    {
+    if (message_arena != submessage_arena) {
       firsthundred = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, firsthundred, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000004u;
-  }
-  else
-  {
+  } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.firsthundred_ = firsthundred;
@@ -1452,114 +1178,89 @@ inline void Piles::set_allocated_firsthundred(::Pile *firsthundred)
 }
 
 // optional .Pile secondHundred = 4;
-inline bool Piles::_internal_has_secondhundred() const
-{
+inline bool Piles::_internal_has_secondhundred() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.secondhundred_ != nullptr);
   return value;
 }
-inline bool Piles::has_secondhundred() const
-{
+inline bool Piles::has_secondhundred() const {
   return _internal_has_secondhundred();
 }
-inline void Piles::clear_secondhundred()
-{
-  if (_impl_.secondhundred_ != nullptr)
-    _impl_.secondhundred_->Clear();
+inline void Piles::clear_secondhundred() {
+  if (_impl_.secondhundred_ != nullptr) _impl_.secondhundred_->Clear();
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline const ::Pile &Piles::_internal_secondhundred() const
-{
-  const ::Pile *p = _impl_.secondhundred_;
-  return p != nullptr ? *p : reinterpret_cast<const ::Pile &>(::_Pile_default_instance_);
+inline const ::Pile& Piles::_internal_secondhundred() const {
+  const ::Pile* p = _impl_.secondhundred_;
+  return p != nullptr ? *p : reinterpret_cast<const ::Pile&>(
+      ::_Pile_default_instance_);
 }
-inline const ::Pile &Piles::secondhundred() const
-{
+inline const ::Pile& Piles::secondhundred() const {
   // @@protoc_insertion_point(field_get:Piles.secondHundred)
   return _internal_secondhundred();
 }
 inline void Piles::unsafe_arena_set_allocated_secondhundred(
-    ::Pile *secondhundred)
-{
-  if (GetArenaForAllocation() == nullptr)
-  {
-    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite *>(_impl_.secondhundred_);
+    ::Pile* secondhundred) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.secondhundred_);
   }
   _impl_.secondhundred_ = secondhundred;
-  if (secondhundred)
-  {
+  if (secondhundred) {
     _impl_._has_bits_[0] |= 0x00000008u;
-  }
-  else
-  {
+  } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Piles.secondHundred)
 }
-inline ::Pile *Piles::release_secondhundred()
-{
+inline ::Pile* Piles::release_secondhundred() {
   _impl_._has_bits_[0] &= ~0x00000008u;
-  ::Pile *temp = _impl_.secondhundred_;
+  ::Pile* temp = _impl_.secondhundred_;
   _impl_.secondhundred_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
-  auto *old = reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite *>(temp);
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
   temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-  if (GetArenaForAllocation() == nullptr)
-  {
-    delete old;
-  }
+  if (GetArenaForAllocation() == nullptr) { delete old; }
 #else  // PROTOBUF_FORCE_COPY_IN_RELEASE
-  if (GetArenaForAllocation() != nullptr)
-  {
+  if (GetArenaForAllocation() != nullptr) {
     temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
   }
-#endif // !PROTOBUF_FORCE_COPY_IN_RELEASE
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::Pile *Piles::unsafe_arena_release_secondhundred()
-{
+inline ::Pile* Piles::unsafe_arena_release_secondhundred() {
   // @@protoc_insertion_point(field_release:Piles.secondHundred)
   _impl_._has_bits_[0] &= ~0x00000008u;
-  ::Pile *temp = _impl_.secondhundred_;
+  ::Pile* temp = _impl_.secondhundred_;
   _impl_.secondhundred_ = nullptr;
   return temp;
 }
-inline ::Pile *Piles::_internal_mutable_secondhundred()
-{
+inline ::Pile* Piles::_internal_mutable_secondhundred() {
   _impl_._has_bits_[0] |= 0x00000008u;
-  if (_impl_.secondhundred_ == nullptr)
-  {
-    auto *p = CreateMaybeMessage<::Pile>(GetArenaForAllocation());
+  if (_impl_.secondhundred_ == nullptr) {
+    auto* p = CreateMaybeMessage<::Pile>(GetArenaForAllocation());
     _impl_.secondhundred_ = p;
   }
   return _impl_.secondhundred_;
 }
-inline ::Pile *Piles::mutable_secondhundred()
-{
-  ::Pile *_msg = _internal_mutable_secondhundred();
+inline ::Pile* Piles::mutable_secondhundred() {
+  ::Pile* _msg = _internal_mutable_secondhundred();
   // @@protoc_insertion_point(field_mutable:Piles.secondHundred)
   return _msg;
 }
-inline void Piles::set_allocated_secondhundred(::Pile *secondhundred)
-{
-  ::PROTOBUF_NAMESPACE_ID::Arena *message_arena = GetArenaForAllocation();
-  if (message_arena == nullptr)
-  {
+inline void Piles::set_allocated_secondhundred(::Pile* secondhundred) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
     delete _impl_.secondhundred_;
   }
-  if (secondhundred)
-  {
-    ::PROTOBUF_NAMESPACE_ID::Arena *submessage_arena =
+  if (secondhundred) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
         ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(secondhundred);
-    if (message_arena != submessage_arena)
-    {
+    if (message_arena != submessage_arena) {
       secondhundred = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, secondhundred, submessage_arena);
     }
     _impl_._has_bits_[0] |= 0x00000008u;
-  }
-  else
-  {
+  } else {
     _impl_._has_bits_[0] &= ~0x00000008u;
   }
   _impl_.secondhundred_ = secondhundred;
@@ -1567,17 +1268,19 @@ inline void Piles::set_allocated_secondhundred(::Pile *secondhundred)
 }
 
 #ifdef __GNUC__
-#pragma GCC diagnostic pop
-#endif // __GNUC__
+  #pragma GCC diagnostic pop
+#endif  // __GNUC__
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
+
 
 // @@protoc_insertion_point(namespace_scope)
+
 
 // @@protoc_insertion_point(global_scope)
 
 #include <google/protobuf/port_undef.inc>
-#endif // GOOGLE_PROTOBUF_INCLUDED_GOOGLE_PROTOBUF_INCLUDED_the_5fgame_2eproto
+#endif  // GOOGLE_PROTOBUF_INCLUDED_GOOGLE_PROTOBUF_INCLUDED_the_5fgame_2eproto

@@ -1,4 +1,4 @@
-#include "player.h"
+#include "Bots/bot.h"
 #include "renderer.h"
 
 #include "the_game.pb.h"
@@ -9,7 +9,7 @@ private:
   Piles piles;
   Pile drawPile;
   std::vector<Cards> playersHands;
-  std::vector<Player> players;
+  std::vector<Bot *> players;
   int activePlayerIndex;
 
 public:

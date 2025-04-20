@@ -1,4 +1,5 @@
 #include "game_handler.h"
+#include "Bots/superSimpleBot.h"
 #include "renderer.h"
 #include "the_game.pb.h"
 #include <chrono>
@@ -22,8 +23,8 @@ GameHandler::GameHandler() {
   }
   std::vector<Cards> playersHands;
   playersHands.push_back(startingHand);
-  std::vector<Player> players;
-  Player player;
+  std::vector<Bot *> players;
+  SuperSimpleBot *player = new SuperSimpleBot();
   players.push_back(player);
   this->renderer = renderer;
   this->piles = piles;
@@ -38,11 +39,11 @@ GameHandler::GameHandler(Piles piles) : piles(piles) {}
 int GameHandler::startGame() {
   std::cout << "isGameOver: " << this->isGameOver() << std::endl;
   while (!this->isGameOver()) {
-    this->renderer.render(this->piles, this->playersHands[0]);
-    std::this_thread::sleep_for(std::chrono::seconds(1));
-    Player activePlayer = this->players[this->activePlayerIndex];
+    this->renderer.render(this->piles,
+                          this->playersHands[this->activePlayerIndex]);
+    Bot *activePlayer = this->players[this->activePlayerIndex];
     Cards playerHand = this->playersHands[this->activePlayerIndex];
-    Piles placedCards = activePlayer.playTurn(this->piles, playerHand);
+    Piles placedCards = activePlayer->playTurn(this->piles, playerHand);
     if (!validateTurn(placedCards)) {
       this->kickPlayer(this->activePlayerIndex);
       continue; // TODO: Handle cleaning up the game after kicking a player

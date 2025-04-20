@@ -41,3 +41,33 @@ message Game {
 message Move {
   optional Piles cardsPlayRequest = 1;
 }
+
+service PileService {
+  rpc MakeMove (MakeMoveRequest) returns (MakeMoveResponse);
+
+  rpc GenerateGame (GenerateGameRequest) returns (GenerateGameResponse);
+}
+
+message MakeMoveRequest {
+  optional Game game = 1;
+  optional Move move = 2;
+}
+
+message MakeMoveResponse {
+  enum Status {
+    SUCCESS = 0;
+    INVALID_MOVE = 1;
+    GAME_OVER = 2;
+  }
+
+  optional Game game = 1;
+  optional Status status = 2;
+}
+
+message GenerateGameRequest {
+  optional int32 playerCount = 1;
+}
+
+message GenerateGameResponse {
+  optional Game game = 1;
+}

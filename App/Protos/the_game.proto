@@ -23,3 +23,21 @@ message Piles {
   optional Pile firstHundred = 3;
   optional Pile secondHundred = 4;
 } 
+
+message Player {
+  optional int32 id = 1;
+  optional int32 cardsInHand = 3;
+  optional string name = 4;
+}
+
+message Game {
+  optional int32 id = 1;
+  optional int32 currentPlayerId = 2;
+  repeated Player players = 3;
+  optional Piles piles = 4;
+  optional Pile drawPile = 5;
+}
+
+message Move {
+  optional Piles cardsPlayRequest = 1;
+}
